@@ -1,0 +1,1929 @@
+{
+  "status": "SUCCESS",
+  "code": 200,
+  "message": "positions fetched",
+  "payload": {
+    "open_positions": [
+      {
+        "position_composite_key": {
+          "zen_id": 87491,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "HDFCBANK",
+        "position": 10,
+        "open_cost": 8715.75,
+        "average_cost_per_share": 871.575,
+        "latest_price": 984,
+        "sod_price": 994.3,
+        "unrealized_pnl": 1124.25,
+        "realized_pnl": 0,
+        "cur_market_value": 9840,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 182828,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SHRIRAMFIN",
+        "position": 102,
+        "open_cost": 54812.85,
+        "average_cost_per_share": 537.381,
+        "latest_price": 864.2,
+        "sod_price": 848.4,
+        "unrealized_pnl": 33335.55,
+        "realized_pnl": 13817.5,
+        "cur_market_value": 88148.40000000001,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89871,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "RELIANCE",
+        "position": 65,
+        "open_cost": 94547.35,
+        "average_cost_per_share": 1454.575,
+        "latest_price": 1544.4,
+        "sod_price": 1542.3,
+        "unrealized_pnl": 5838.65,
+        "realized_pnl": 0,
+        "cur_market_value": 100386,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89596,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "NMDC",
+        "position": 525,
+        "open_cost": 40867,
+        "average_cost_per_share": 77.842,
+        "latest_price": 77.28,
+        "sod_price": 77.15,
+        "unrealized_pnl": -295,
+        "realized_pnl": 0,
+        "cur_market_value": 40572,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86576,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ABB",
+        "position": 17,
+        "open_cost": 120088.09999999999,
+        "average_cost_per_share": 7064.006,
+        "latest_price": 5171,
+        "sod_price": 5242,
+        "unrealized_pnl": -32181.1,
+        "realized_pnl": 0,
+        "cur_market_value": 87907,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86721,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ASIANPAINT",
+        "position": 25,
+        "open_cost": 72388.8,
+        "average_cost_per_share": 2895.552,
+        "latest_price": 2785.7,
+        "sod_price": 2790.9,
+        "unrealized_pnl": -2746.3,
+        "realized_pnl": 0,
+        "cur_market_value": 69642.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 15974,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BLIL",
+        "position": 370,
+        "open_cost": 29191.299999999996,
+        "average_cost_per_share": 78.895,
+        "latest_price": 0,
+        "sod_price": 72.31,
+        "unrealized_pnl": -29191.3,
+        "realized_pnl": 0,
+        "cur_market_value": 0,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86925,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "CENTRALBK",
+        "position": 200,
+        "open_cost": 7819,
+        "average_cost_per_share": 39.095,
+        "latest_price": 35.95,
+        "sod_price": 36.14,
+        "unrealized_pnl": -629,
+        "realized_pnl": 0,
+        "cur_market_value": 7190.000000000001,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87331,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "GRSE",
+        "position": 25,
+        "open_cost": 67170,
+        "average_cost_per_share": 2686.8,
+        "latest_price": 2235,
+        "sod_price": 2290.1,
+        "unrealized_pnl": -11295,
+        "realized_pnl": 26374.2,
+        "cur_market_value": 55875,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89871,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "RELIANCE",
+        "position": 35,
+        "open_cost": 40199.25,
+        "average_cost_per_share": 1148.55,
+        "latest_price": 1544.4,
+        "sod_price": 1542.3,
+        "unrealized_pnl": 13854.75,
+        "realized_pnl": 0,
+        "cur_market_value": 54054,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 444381,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ADANIENSOL",
+        "position": 20,
+        "open_cost": 15694,
+        "average_cost_per_share": 784.7,
+        "latest_price": 977.55,
+        "sod_price": 994.3,
+        "unrealized_pnl": 3857,
+        "realized_pnl": 0,
+        "cur_market_value": 19551,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89711,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "PFC",
+        "position": 150,
+        "open_cost": 69603.25,
+        "average_cost_per_share": 464.022,
+        "latest_price": 335.65,
+        "sod_price": 336.15,
+        "unrealized_pnl": -19255.75,
+        "realized_pnl": 0,
+        "cur_market_value": 50347.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87144,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "EICHERMOT",
+        "position": 2,
+        "open_cost": 10068,
+        "average_cost_per_share": 5034,
+        "latest_price": 7134.5,
+        "sod_price": 7061.5,
+        "unrealized_pnl": 4201,
+        "realized_pnl": 0,
+        "cur_market_value": 14269,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88346,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "IMFA",
+        "position": 45,
+        "open_cost": 35448.5,
+        "average_cost_per_share": 787.744,
+        "latest_price": 1381.9,
+        "sod_price": 1425.7,
+        "unrealized_pnl": 26737,
+        "realized_pnl": 11496.9,
+        "cur_market_value": 62185.50000000001,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86881,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BRITANNIA",
+        "position": 12,
+        "open_cost": 64403.06,
+        "average_cost_per_share": 5366.922,
+        "latest_price": 6096,
+        "sod_price": 6066,
+        "unrealized_pnl": 8748.94,
+        "realized_pnl": 0,
+        "cur_market_value": 73152,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86822,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BDL",
+        "position": 25,
+        "open_cost": 46377.3,
+        "average_cost_per_share": 1855.092,
+        "latest_price": 1324.3,
+        "sod_price": 1355.6,
+        "unrealized_pnl": -13269.8,
+        "realized_pnl": 0,
+        "cur_market_value": 33107.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 91168,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "ETERNAL",
+        "position": 25,
+        "open_cost": 8478.75,
+        "average_cost_per_share": 339.15,
+        "latest_price": 284.45,
+        "sod_price": 284.45,
+        "unrealized_pnl": -1367.5,
+        "realized_pnl": 0,
+        "cur_market_value": 7111.25,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88741,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "M&M",
+        "position": 41,
+        "open_cost": 104714.15,
+        "average_cost_per_share": 2554.004,
+        "latest_price": 3612.8,
+        "sod_price": 3621,
+        "unrealized_pnl": 43410.65,
+        "realized_pnl": 0,
+        "cur_market_value": 148124.80000000002,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88462,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ITC",
+        "position": 120,
+        "open_cost": 50919.700000000004,
+        "average_cost_per_share": 424.331,
+        "latest_price": 399.8,
+        "sod_price": 401.7,
+        "unrealized_pnl": -2943.7,
+        "realized_pnl": 0,
+        "cur_market_value": 47976,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86598,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "ADANIGREEN",
+        "position": 15,
+        "open_cost": 15608.999999999998,
+        "average_cost_per_share": 1040.6,
+        "latest_price": 1020.7,
+        "sod_price": 1028.2,
+        "unrealized_pnl": -298.5,
+        "realized_pnl": 0,
+        "cur_market_value": 15310.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88070,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "HEROMOTOCO",
+        "position": 13,
+        "open_cost": 62553,
+        "average_cost_per_share": 4811.769,
+        "latest_price": 5817,
+        "sod_price": 5946.5,
+        "unrealized_pnl": 13068,
+        "realized_pnl": 0,
+        "cur_market_value": 75621,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88243,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ICICIBANK",
+        "position": -4,
+        "open_cost": -5688.8,
+        "average_cost_per_share": 1422.2,
+        "latest_price": 1352.4,
+        "sod_price": 1366,
+        "unrealized_pnl": 279.2,
+        "realized_pnl": 0,
+        "cur_market_value": -5409.6,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88290,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "IDEA",
+        "position": 1258,
+        "open_cost": 12358.279999999997,
+        "average_cost_per_share": 9.824,
+        "latest_price": 11.13,
+        "sod_price": 11.25,
+        "unrealized_pnl": 1643.26,
+        "realized_pnl": -59.77,
+        "cur_market_value": 14001.54,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88606,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "KOTAKBANK",
+        "position": 17,
+        "open_cost": 30222.1,
+        "average_cost_per_share": 1777.771,
+        "latest_price": 2173.2,
+        "sod_price": 2182.4,
+        "unrealized_pnl": 6722.3,
+        "realized_pnl": 0,
+        "cur_market_value": 36944.399999999994,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90438,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "UBL",
+        "position": 25,
+        "open_cost": 49036.8,
+        "average_cost_per_share": 1961.472,
+        "latest_price": 1611.7,
+        "sod_price": 1624.5,
+        "unrealized_pnl": -8744.3,
+        "realized_pnl": 0,
+        "cur_market_value": 40292.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88361,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "INDIGO",
+        "position": 12,
+        "open_cost": 63145.5,
+        "average_cost_per_share": 5262.125,
+        "latest_price": 4980.5,
+        "sod_price": 4974,
+        "unrealized_pnl": -3379.5,
+        "realized_pnl": 0,
+        "cur_market_value": 59766,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88089,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "HINDUNILVR",
+        "position": 21,
+        "open_cost": 52950,
+        "average_cost_per_share": 2521.429,
+        "latest_price": 2275.6,
+        "sod_price": 2281.1,
+        "unrealized_pnl": -5162.4,
+        "realized_pnl": 0,
+        "cur_market_value": 47787.6,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90366,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "TECHM",
+        "position": 20,
+        "open_cost": 32111.200000000004,
+        "average_cost_per_share": 1605.56,
+        "latest_price": 1579.4,
+        "sod_price": 1578.2,
+        "unrealized_pnl": -523.2,
+        "realized_pnl": 0,
+        "cur_market_value": 31588,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 182828,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "SHRIRAMFIN",
+        "position": 8,
+        "open_cost": 4768.4,
+        "average_cost_per_share": 596.05,
+        "latest_price": 864.2,
+        "sod_price": 848.4,
+        "unrealized_pnl": 2145.2,
+        "realized_pnl": 0,
+        "cur_market_value": 6913.6,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86965,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "COLPAL",
+        "position": 15,
+        "open_cost": 42747.5,
+        "average_cost_per_share": 2849.833,
+        "latest_price": 2087.4,
+        "sod_price": 2160.4,
+        "unrealized_pnl": -11436.5,
+        "realized_pnl": 0,
+        "cur_market_value": 31311,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87491,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "HDFCBANK",
+        "position": 112,
+        "open_cost": 94650.7,
+        "average_cost_per_share": 845.096,
+        "latest_price": 984,
+        "sod_price": 994.3,
+        "unrealized_pnl": 15557.3,
+        "realized_pnl": 0,
+        "cur_market_value": 110208,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 499879,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "SUZLON",
+        "position": 100,
+        "open_cost": 5420,
+        "average_cost_per_share": 54.2,
+        "latest_price": 51.94,
+        "sod_price": 52.67,
+        "unrealized_pnl": -226,
+        "realized_pnl": 0,
+        "cur_market_value": 5194,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86827,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BEL",
+        "position": 200,
+        "open_cost": 59005,
+        "average_cost_per_share": 295.025,
+        "latest_price": 385.6,
+        "sod_price": 388,
+        "unrealized_pnl": 18115,
+        "realized_pnl": 0,
+        "cur_market_value": 77120,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88729,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "LT",
+        "position": 8,
+        "open_cost": 24171.4,
+        "average_cost_per_share": 3021.425,
+        "latest_price": 4062.4,
+        "sod_price": 4063.8,
+        "unrealized_pnl": 8327.8,
+        "realized_pnl": 0,
+        "cur_market_value": 32499.2,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87494,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "HDFCLIFE",
+        "position": 50,
+        "open_cost": 32455.1,
+        "average_cost_per_share": 649.102,
+        "latest_price": 753.5,
+        "sod_price": 764.35,
+        "unrealized_pnl": 5219.9,
+        "realized_pnl": 0,
+        "cur_market_value": 37675,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90340,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "TATAPOWER",
+        "position": 160,
+        "open_cost": 64425.5,
+        "average_cost_per_share": 402.659,
+        "latest_price": 378.55,
+        "sod_price": 379.85,
+        "unrealized_pnl": -3857.5,
+        "realized_pnl": 0,
+        "cur_market_value": 60568,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88606,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "KOTAKBANK",
+        "position": 3,
+        "open_cost": 6043.049999999999,
+        "average_cost_per_share": 2014.35,
+        "latest_price": 2173.2,
+        "sod_price": 2182.4,
+        "unrealized_pnl": 476.55,
+        "realized_pnl": 0,
+        "cur_market_value": 6519.599999999999,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88243,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "ICICIBANK",
+        "position": 4,
+        "open_cost": 5079,
+        "average_cost_per_share": 1269.75,
+        "latest_price": 1352.4,
+        "sod_price": 1366,
+        "unrealized_pnl": 330.6,
+        "realized_pnl": 0,
+        "cur_market_value": 5409.6,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90159,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "SOLARINDS",
+        "position": 1,
+        "open_cost": 10640,
+        "average_cost_per_share": 10640,
+        "latest_price": 11815,
+        "sod_price": 11918,
+        "unrealized_pnl": 1175,
+        "realized_pnl": 0,
+        "cur_market_value": 11815,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 1862740,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "TMCV",
+        "position": 215,
+        "open_cost": 71527.15000000001,
+        "average_cost_per_share": 332.684,
+        "latest_price": 386.9,
+        "sod_price": 387.35,
+        "unrealized_pnl": 11656.35,
+        "realized_pnl": 0,
+        "cur_market_value": 83183.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90159,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SOLARINDS",
+        "position": 1,
+        "open_cost": 13500,
+        "average_cost_per_share": 13500,
+        "latest_price": 11815,
+        "sod_price": 11918,
+        "unrealized_pnl": -1685,
+        "realized_pnl": 0,
+        "cur_market_value": 11815,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 1002573,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "HYUNDAI",
+        "position": 25,
+        "open_cost": 47775.850000000006,
+        "average_cost_per_share": 1911.034,
+        "latest_price": 2286.4,
+        "sod_price": 2268.7,
+        "unrealized_pnl": 9384.15,
+        "realized_pnl": 0,
+        "cur_market_value": 57160,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90341,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "TATASTEEL",
+        "position": 150,
+        "open_cost": 19123.5,
+        "average_cost_per_share": 127.49,
+        "latest_price": 170.34,
+        "sod_price": 169.83,
+        "unrealized_pnl": 6427.5,
+        "realized_pnl": 0,
+        "cur_market_value": 25551,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87094,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "DRREDDY",
+        "position": 40,
+        "open_cost": 50548.95,
+        "average_cost_per_share": 1263.724,
+        "latest_price": 1272,
+        "sod_price": 1276.9,
+        "unrealized_pnl": 331.05,
+        "realized_pnl": 0,
+        "cur_market_value": 50880,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 1020055,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SWIGGY",
+        "position": 30,
+        "open_cost": 12930,
+        "average_cost_per_share": 431,
+        "latest_price": 398.95,
+        "sod_price": 396.25,
+        "unrealized_pnl": -961.5,
+        "realized_pnl": 0,
+        "cur_market_value": 11968.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87486,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "HCLTECH",
+        "position": 10,
+        "open_cost": 14911,
+        "average_cost_per_share": 1491.1,
+        "latest_price": 1655,
+        "sod_price": 1651.7,
+        "unrealized_pnl": 1639,
+        "realized_pnl": 0,
+        "cur_market_value": 16550,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90341,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "TATASTEEL",
+        "position": 257,
+        "open_cost": 41491.43000000001,
+        "average_cost_per_share": 161.445,
+        "latest_price": 170.34,
+        "sod_price": 169.83,
+        "unrealized_pnl": 2285.95,
+        "realized_pnl": 115.86,
+        "cur_market_value": 43777.38,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90273,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SUNPHARMA",
+        "position": 35,
+        "open_cost": 57844.05,
+        "average_cost_per_share": 1652.687,
+        "latest_price": 1792.9,
+        "sod_price": 1781.3,
+        "unrealized_pnl": 4907.45,
+        "realized_pnl": 0,
+        "cur_market_value": 62751.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86721,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "ASIANPAINT",
+        "position": 1,
+        "open_cost": 2508.9,
+        "average_cost_per_share": 2508.9,
+        "latest_price": 2785.7,
+        "sod_price": 2790.9,
+        "unrealized_pnl": 276.8,
+        "realized_pnl": 0,
+        "cur_market_value": 2785.7,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90360,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "TCS",
+        "position": 3,
+        "open_cost": 9506.55,
+        "average_cost_per_share": 3168.85,
+        "latest_price": 3217.8,
+        "sod_price": 3205.1,
+        "unrealized_pnl": 146.85,
+        "realized_pnl": 0,
+        "cur_market_value": 9653.400000000001,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90360,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "TCS",
+        "position": 12,
+        "open_cost": 48147.44,
+        "average_cost_per_share": 4012.287,
+        "latest_price": 3217.8,
+        "sod_price": 3205.1,
+        "unrealized_pnl": -9533.84,
+        "realized_pnl": 0,
+        "cur_market_value": 38613.600000000006,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 569765,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "WELSPUNLIV",
+        "position": 310,
+        "open_cost": 41894.72,
+        "average_cost_per_share": 135.144,
+        "latest_price": 133.76,
+        "sod_price": 135.63,
+        "unrealized_pnl": -429.12,
+        "realized_pnl": 0,
+        "cur_market_value": 41465.6,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89516,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "NCC",
+        "position": 50,
+        "open_cost": 10478,
+        "average_cost_per_share": 209.56,
+        "latest_price": 155.32,
+        "sod_price": 157.85,
+        "unrealized_pnl": -2712,
+        "realized_pnl": 0,
+        "cur_market_value": 7766,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87223,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "FORTIS",
+        "position": 190,
+        "open_cost": 140757.4,
+        "average_cost_per_share": 740.828,
+        "latest_price": 870.95,
+        "sod_price": 875,
+        "unrealized_pnl": 24723.1,
+        "realized_pnl": 0,
+        "cur_market_value": 165480.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86740,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "AUROPHARMA",
+        "position": 10,
+        "open_cost": 11009,
+        "average_cost_per_share": 1100.9,
+        "latest_price": 1193,
+        "sod_price": 1178.1,
+        "unrealized_pnl": 921,
+        "realized_pnl": 0,
+        "cur_market_value": 11930,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88729,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "LT",
+        "position": 30,
+        "open_cost": 103762.90000000001,
+        "average_cost_per_share": 3458.763,
+        "latest_price": 4062.4,
+        "sod_price": 4063.8,
+        "unrealized_pnl": 18109.1,
+        "realized_pnl": 0,
+        "cur_market_value": 121872,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88529,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "JSWSTEEL",
+        "position": 20,
+        "open_cost": 18177,
+        "average_cost_per_share": 908.85,
+        "latest_price": 1079.3,
+        "sod_price": 1082.6,
+        "unrealized_pnl": 3409,
+        "realized_pnl": 0,
+        "cur_market_value": 21586,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88717,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "LIQUIDBEES",
+        "position": 1080,
+        "open_cost": 1076000,
+        "average_cost_per_share": 996.296,
+        "latest_price": 1000,
+        "sod_price": 1000,
+        "unrealized_pnl": 4000,
+        "realized_pnl": 996,
+        "cur_market_value": 1080000,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88290,
+          "client_id": 1,
+          "broker": "ZERODHA",
+          "account_id": 7,
+          "strategy_id": 1
+        },
+        "trading_symbol": "IDEA",
+        "position": 16,
+        "open_cost": 119.41,
+        "average_cost_per_share": 7.463,
+        "latest_price": 11.13,
+        "sod_price": 11.25,
+        "unrealized_pnl": 58.67,
+        "realized_pnl": 0.15,
+        "cur_market_value": 178.08,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 463810,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "JIOFIN",
+        "position": 60,
+        "open_cost": 20301.3,
+        "average_cost_per_share": 338.355,
+        "latest_price": 293.15,
+        "sod_price": 295.25,
+        "unrealized_pnl": -2712.3,
+        "realized_pnl": 0,
+        "cur_market_value": 17589,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86599,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ADANIPORTS",
+        "position": 40,
+        "open_cost": 50910.1,
+        "average_cost_per_share": 1272.753,
+        "latest_price": 1486.3,
+        "sod_price": 1499,
+        "unrealized_pnl": 8541.9,
+        "realized_pnl": 0,
+        "cur_market_value": 59452,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86786,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BAJFINANCE",
+        "position": 308,
+        "open_cost": 244322.5,
+        "average_cost_per_share": 793.255,
+        "latest_price": 999.6,
+        "sod_price": 998.4,
+        "unrealized_pnl": 63554.3,
+        "realized_pnl": 24984.75,
+        "cur_market_value": 307876.8,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89979,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SBIN",
+        "position": 100,
+        "open_cost": 79640.4,
+        "average_cost_per_share": 796.404,
+        "latest_price": 975.85,
+        "sod_price": 961.15,
+        "unrealized_pnl": 17944.6,
+        "realized_pnl": 0,
+        "cur_market_value": 97585,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90300,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SWARAJENG",
+        "position": 6,
+        "open_cost": 21188.5,
+        "average_cost_per_share": 3531.417,
+        "latest_price": 3631.4,
+        "sod_price": 3695.4,
+        "unrealized_pnl": 599.9,
+        "realized_pnl": 0,
+        "cur_market_value": 21788.4,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86786,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "BAJFINANCE",
+        "position": 2,
+        "open_cost": 8391.55,
+        "average_cost_per_share": 4195.775,
+        "latest_price": 999.6,
+        "sod_price": 998.4,
+        "unrealized_pnl": -6392.35,
+        "realized_pnl": 0,
+        "cur_market_value": 1999.2,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88704,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "LICI",
+        "position": 30,
+        "open_cost": 31648.86,
+        "average_cost_per_share": 1054.962,
+        "latest_price": 844.55,
+        "sod_price": 854.5,
+        "unrealized_pnl": -6312.36,
+        "realized_pnl": 0,
+        "cur_market_value": 25336.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87076,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "DIXON",
+        "position": 7,
+        "open_cost": 102749.2,
+        "average_cost_per_share": 14678.457,
+        "latest_price": 13274,
+        "sod_price": 13628,
+        "unrealized_pnl": -9831.2,
+        "realized_pnl": 6053,
+        "cur_market_value": 92918,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86686,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "APOLLOHOSP",
+        "position": 39,
+        "open_cost": 263181.7,
+        "average_cost_per_share": 6748.249,
+        "latest_price": 6921.5,
+        "sod_price": 7051.5,
+        "unrealized_pnl": 6756.8,
+        "realized_pnl": 0,
+        "cur_market_value": 269938.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86881,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "BRITANNIA",
+        "position": 2,
+        "open_cost": 12172,
+        "average_cost_per_share": 6086,
+        "latest_price": 6096,
+        "sod_price": 6066,
+        "unrealized_pnl": 20,
+        "realized_pnl": 0,
+        "cur_market_value": 12192,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86876,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BPCL",
+        "position": 250,
+        "open_cost": 79925,
+        "average_cost_per_share": 319.7,
+        "latest_price": 368.35,
+        "sod_price": 368.15,
+        "unrealized_pnl": 12162.5,
+        "realized_pnl": 0,
+        "cur_market_value": 92087.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88399,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "INFY",
+        "position": 49,
+        "open_cost": 75757,
+        "average_cost_per_share": 1546.061,
+        "latest_price": 1602,
+        "sod_price": 1592.9,
+        "unrealized_pnl": 2741,
+        "realized_pnl": 0,
+        "cur_market_value": 78498,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90402,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "TITAN",
+        "position": 28,
+        "open_cost": 94015,
+        "average_cost_per_share": 3357.679,
+        "latest_price": 3907.9,
+        "sod_price": 3929.5,
+        "unrealized_pnl": 15406.2,
+        "realized_pnl": 0,
+        "cur_market_value": 109421.2,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 1109784,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ITCHOTELS",
+        "position": 100,
+        "open_cost": 17762.93,
+        "average_cost_per_share": 177.629,
+        "latest_price": 191.97,
+        "sod_price": 190.54,
+        "unrealized_pnl": 1434.07,
+        "realized_pnl": 0,
+        "cur_market_value": 19197,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88399,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "INFY",
+        "position": 7,
+        "open_cost": 9593.15,
+        "average_cost_per_share": 1370.45,
+        "latest_price": 1602,
+        "sod_price": 1592.9,
+        "unrealized_pnl": 1620.85,
+        "realized_pnl": 0,
+        "cur_market_value": 11214,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86829,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BEPL",
+        "position": 500,
+        "open_cost": 62320.42999999999,
+        "average_cost_per_share": 124.641,
+        "latest_price": 87.8,
+        "sod_price": 88.49,
+        "unrealized_pnl": -18420.43,
+        "realized_pnl": 0,
+        "cur_market_value": 43900,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88081,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "HINDALCO",
+        "position": 27,
+        "open_cost": 15043.5,
+        "average_cost_per_share": 557.167,
+        "latest_price": 848.8,
+        "sod_price": 837.15,
+        "unrealized_pnl": 7874.1,
+        "realized_pnl": 0,
+        "cur_market_value": 22917.6,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88808,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "MARUTI",
+        "position": 8,
+        "open_cost": 92885,
+        "average_cost_per_share": 11610.625,
+        "latest_price": 16398,
+        "sod_price": 16354,
+        "unrealized_pnl": 38299,
+        "realized_pnl": 0,
+        "cur_market_value": 131184,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 1300704,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BELRISE",
+        "position": 400,
+        "open_cost": 58091.5,
+        "average_cost_per_share": 145.229,
+        "latest_price": 157.5,
+        "sod_price": 157.7,
+        "unrealized_pnl": 4908.5,
+        "realized_pnl": 0,
+        "cur_market_value": 63000,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88399,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "INFY",
+        "position": 10,
+        "open_cost": 14733,
+        "average_cost_per_share": 1473.3,
+        "latest_price": 1602,
+        "sod_price": 1592.9,
+        "unrealized_pnl": 1287,
+        "realized_pnl": 0,
+        "cur_market_value": 16020,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87465,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "GULFOILLUB",
+        "position": 65,
+        "open_cost": 70939.15000000001,
+        "average_cost_per_share": 1091.372,
+        "latest_price": 1198.8,
+        "sod_price": 1198.6,
+        "unrealized_pnl": 6982.85,
+        "realized_pnl": 0,
+        "cur_market_value": 77922,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86848,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BHARTIARTL",
+        "position": 20,
+        "open_cost": 33593.25,
+        "average_cost_per_share": 1679.663,
+        "latest_price": 2108,
+        "sod_price": 2102,
+        "unrealized_pnl": 8566.75,
+        "realized_pnl": 0,
+        "cur_market_value": 42160,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 495965,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ORCHPHARMA",
+        "position": 30,
+        "open_cost": 22949.5,
+        "average_cost_per_share": 764.983,
+        "latest_price": 807.35,
+        "sod_price": 829.8,
+        "unrealized_pnl": 1271,
+        "realized_pnl": 0,
+        "cur_market_value": 24220.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86855,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BIRET",
+        "position": 211,
+        "open_cost": 67678.44999999998,
+        "average_cost_per_share": 320.751,
+        "latest_price": 330.46,
+        "sod_price": 329.9,
+        "unrealized_pnl": 2048.61,
+        "realized_pnl": 0,
+        "cur_market_value": 69727.06,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87491,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "HDFCBANK",
+        "position": 10,
+        "open_cost": 10054.5,
+        "average_cost_per_share": 1005.45,
+        "latest_price": 984,
+        "sod_price": 994.3,
+        "unrealized_pnl": -214.5,
+        "realized_pnl": 0,
+        "cur_market_value": 9840,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86849,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "BHEL",
+        "position": 210,
+        "open_cost": 61477,
+        "average_cost_per_share": 292.748,
+        "latest_price": 277.85,
+        "sod_price": 279.35,
+        "unrealized_pnl": -3128.5,
+        "realized_pnl": 1634.45,
+        "cur_market_value": 58348.50000000001,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89665,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "PAGEIND",
+        "position": 1,
+        "open_cost": 47500,
+        "average_cost_per_share": 47500,
+        "latest_price": 36055,
+        "sod_price": 36355,
+        "unrealized_pnl": -11445,
+        "realized_pnl": 0,
+        "cur_market_value": 36055,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89643,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ONGC",
+        "position": 100,
+        "open_cost": 28530.3,
+        "average_cost_per_share": 285.303,
+        "latest_price": 232.91,
+        "sod_price": 232.21,
+        "unrealized_pnl": -5239.3,
+        "realized_pnl": 0,
+        "cur_market_value": 23291,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86959,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "COALINDIA",
+        "position": 120,
+        "open_cost": 53414.99,
+        "average_cost_per_share": 445.125,
+        "latest_price": 384.75,
+        "sod_price": 381.6,
+        "unrealized_pnl": -7244.99,
+        "realized_pnl": 0,
+        "cur_market_value": 46170,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 90007,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SETFGOLD",
+        "position": 600,
+        "open_cost": 50285.950000000004,
+        "average_cost_per_share": 83.81,
+        "latest_price": 113.3,
+        "sod_price": 112.89,
+        "unrealized_pnl": 17694.05,
+        "realized_pnl": 0,
+        "cur_market_value": 67980,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86905,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "CANBK",
+        "position": 120,
+        "open_cost": 13863.6,
+        "average_cost_per_share": 115.53,
+        "latest_price": 150.21,
+        "sod_price": 147.17,
+        "unrealized_pnl": 4161.6,
+        "realized_pnl": 0,
+        "cur_market_value": 18025.2,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89979,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "SBIN",
+        "position": 10,
+        "open_cost": 9074.5,
+        "average_cost_per_share": 907.45,
+        "latest_price": 975.85,
+        "sod_price": 961.15,
+        "unrealized_pnl": 684,
+        "realized_pnl": 0,
+        "cur_market_value": 9758.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87486,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 60
+        },
+        "trading_symbol": "HCLTECH",
+        "position": 4,
+        "open_cost": 5341.6,
+        "average_cost_per_share": 1335.4,
+        "latest_price": 1655,
+        "sod_price": 1651.7,
+        "unrealized_pnl": 1278.4,
+        "realized_pnl": 0,
+        "cur_market_value": 6620,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86688,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "APOLLOTYRE",
+        "position": 71,
+        "open_cost": 35673.5,
+        "average_cost_per_share": 502.444,
+        "latest_price": 499.3,
+        "sod_price": 511,
+        "unrealized_pnl": -223.2,
+        "realized_pnl": 0,
+        "cur_market_value": 35450.3,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88346,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 704
+        },
+        "trading_symbol": "IMFA",
+        "position": 10,
+        "open_cost": 11332.999999999998,
+        "average_cost_per_share": 1133.3,
+        "latest_price": 1381.9,
+        "sod_price": 1425.7,
+        "unrealized_pnl": 2486,
+        "realized_pnl": 0,
+        "cur_market_value": 13819,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86597,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "ADANIENT",
+        "position": 25,
+        "open_cost": 73302.3,
+        "average_cost_per_share": 2932.092,
+        "latest_price": 2232.5,
+        "sod_price": 2247.9,
+        "unrealized_pnl": -17489.8,
+        "realized_pnl": 0,
+        "cur_market_value": 55812.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86786,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 747
+        },
+        "trading_symbol": "BAJFINANCE",
+        "position": 38,
+        "open_cost": 38181.4,
+        "average_cost_per_share": 1004.774,
+        "latest_price": 999.6,
+        "sod_price": 998.4,
+        "unrealized_pnl": -196.6,
+        "realized_pnl": 0,
+        "cur_market_value": 37984.8,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 633513,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "SHAKTIPUMP",
+        "position": 23,
+        "open_cost": 18830.65,
+        "average_cost_per_share": 818.724,
+        "latest_price": 707.4,
+        "sod_price": 780.45,
+        "unrealized_pnl": -2560.45,
+        "realized_pnl": 0,
+        "cur_market_value": 16270.199999999999,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 87486,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "HCLTECH",
+        "position": 12,
+        "open_cost": 19652.6,
+        "average_cost_per_share": 1637.717,
+        "latest_price": 1655,
+        "sod_price": 1651.7,
+        "unrealized_pnl": 207.4,
+        "realized_pnl": 0,
+        "cur_market_value": 19860,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 88412,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "IOC",
+        "position": 280,
+        "open_cost": 46645.3,
+        "average_cost_per_share": 166.59,
+        "latest_price": 168.16,
+        "sod_price": 167.74,
+        "unrealized_pnl": 439.5,
+        "realized_pnl": 0,
+        "cur_market_value": 47084.799999999996,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 89845,
+          "client_id": 1,
+          "broker": "KOTAK",
+          "account_id": 10,
+          "strategy_id": 1
+        },
+        "trading_symbol": "RECLTD",
+        "position": 190,
+        "open_cost": 102126.4,
+        "average_cost_per_share": 537.507,
+        "latest_price": 333.95,
+        "sod_price": 335.4,
+        "unrealized_pnl": -38675.9,
+        "realized_pnl": 0,
+        "cur_market_value": 63450.5,
+        "date": "2025-12-17"
+      },
+      {
+        "position_composite_key": {
+          "zen_id": 86686,
+          "client_id": 1,
+          "broker": "ZERODHA",
+          "account_id": 7,
+          "strategy_id": 1
+        },
+        "trading_symbol": "APOLLOHOSP",
+        "position": 3,
+        "open_cost": 24088.5,
+        "average_cost_per_share": 8029.5,
+        "latest_price": 6921.5,
+        "sod_price": 7051.5,
+        "unrealized_pnl": -3324,
+        "realized_pnl": 0,
+        "cur_market_value": 20764.5,
+        "date": "2025-12-17"
+      }
+    ],
+    "closed_positions": []
+  }
+}

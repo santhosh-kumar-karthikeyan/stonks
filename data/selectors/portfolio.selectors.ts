@@ -1,6 +1,7 @@
 import { PositionsStore } from '../store/positions.store';
 import { InstrumentsStore } from '../store/instruments.store';
 import { InstrumentType } from '../contracts/securities.contract';
+import { WatchlistStore } from '../store/watchlist.store';
 
 export interface PortfolioTableRow {
   id: string;
@@ -13,6 +14,7 @@ export interface PortfolioTableRow {
   totalPnl: number;
   pnlPercent: number;
   marketValue: number;
+  isSaved: boolean;
 }
 
 export interface PortfolioSummary {
@@ -26,8 +28,10 @@ export interface PortfolioSummary {
 export function selectPortfolioTableRows(
   positionsStore: PositionsStore,
   instrumentsStore: InstrumentsStore,
+  watchlistsStore: WatchlistStore,
 ): PortfolioTableRow[] {
   const rows: PortfolioTableRow[] = [];
+  const watchlists = watchlistsStore.getAll();
   for (const position of positionsStore.getAll()) {
     const instrument = instrumentsStore.getById(position.instrumentId);
     if (!instrument) continue;
@@ -36,6 +40,9 @@ export function selectPortfolioTableRows(
     const totalPnl = position.unrealizedPnl + position.realizedPnl;
     const pnlPercent =
       investedAmount === 0 ? 0 : (totalPnl / investedAmount) * 100;
+    const isSaved: boolean = watchlists.some((w) =>
+      w.entries.some((e) => e.id === instrument.id),
+    );
     rows.push({
       id: position.id,
       symbol: position.symbol,
@@ -47,6 +54,7 @@ export function selectPortfolioTableRows(
       totalPnl,
       pnlPercent,
       marketValue: position.marketValue,
+      isSaved
     });
   }
   return rows;

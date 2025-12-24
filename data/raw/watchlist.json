@@ -1,1 +1,15 @@
-{"general":{"id":"general","name":"General","entries":[{"id":"89871-1-10-KOTAK-1","marketValue":100386,"symbol":"RELIANCE","type":"EQ"},{"id":"87491-1-10-KOTAK-60","marketValue":9840,"symbol":"HDFCBANK","type":"EQ"},{"id":"86686-1-7-ZERODHA-1","marketValue":20764.5,"symbol":"APOLLOHOSP","type":"EQ"}]}}
+[
+  {
+    "id": "general",
+    "name": "General",
+    "entries": [
+      {
+        "id": 87491,
+        "symbol": "HDFCBANK",
+        "type": "EQ",
+        "name": "HDFC Bank Limited"
+      }
+    ],
+    "lastAccessedAt": 0
+  }
+]

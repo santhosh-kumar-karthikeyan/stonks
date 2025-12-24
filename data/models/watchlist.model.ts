@@ -1,11 +1,11 @@
 import { Timestamp } from 'next/dist/server/lib/cache-handlers/types';
 import { InstrumentType } from '../contracts/securities.contract';
-
+import { Instrument } from './instrument.model';
 export interface WatchlistEntry {
-  id: string;
+  id: Instrument['id'];
   symbol: string;
   type: InstrumentType;
-  marketValue: number;
+  name: Instrument['name'];
 }
 
 export type Watchlist = {
@@ -15,4 +15,4 @@ export type Watchlist = {
   lastAccessedAt: Timestamp;
 };
 
-export type Watchlists = Record<string, Watchlist>;
+export type Watchlists = Watchlist[];

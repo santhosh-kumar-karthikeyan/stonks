@@ -20,12 +20,16 @@ function transformRawSecurity(raw: SecurityInstrument): Instrument {
   };
 }
 
-// export function transformSecuritiesToWatchlistEntry(raw: SecurityInstrument): WatchlistEntry {
-//     return {
-//         id: raw.zen_id,
-
-//     }
-// }
+export function transformSecuritiesToWatchlistEntry(
+  raw: SecurityInstrument,
+): WatchlistEntry {
+  return {
+    id: raw.zen_id,
+    type: raw.instrument_type,
+    symbol: raw.trading_symbol,
+    name: raw.name,
+  };
+}
 
 // many raw -> instrument array
 export function transformSecuritiesResponse(

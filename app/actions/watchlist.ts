@@ -53,7 +53,7 @@ export async function createWatchlist(
   return { ok: true, data: slugName };
 }
 
-export async function addToWatchlist(
+export async function toggleToWatchlist(
   entry: WatchlistEntry,
   watchlistId: string,
 ) {
@@ -62,11 +62,11 @@ export async function addToWatchlist(
     return;
   }
   const entries = watchlists[watchlistId].entries;
-  if (entries.find((e) => e.id === entry.id)) return;
-  const newEntries: WatchlistEntry[] = Array.from(
-    new Set(watchlists[watchlistId].entries).add(entry),
-  );
-
+  const index = entries.findIndex((e) => e.id === entry.id);
+  const newEntries =
+    index === -1
+      ? [...entries, entry]
+      : entries.filter((e) => e.id !== entry.id);
   watchlists[watchlistId].entries = newEntries;
   await fs.writeFile(WATCHLIST_PATH, JSON.stringify(watchlists), () => {});
 }

@@ -1,15 +1,18 @@
 'use server';
 import { WatchlistEntry, Watchlists } from '@/data/models/watchlist.model';
-import { PortfolioTableRow } from '../../data/selectors/portfolio.selectors';
+import { DEFAULT_WATCHLIST_NAME } from '@/lib/constants';
 import fs from 'fs';
+import path from 'path';
 import { slug } from 'slug-gen';
-const WATCHLIST_PATH: string = '../../data/raw/watchlist.json';
-const DEFAULT_WATCHLIST_NAME = 'General';
+const WATCHLIST_PATH: string = path.join(
+  process.cwd(),
+  'data/raw/watchlist.json',
+);
 type Result<T> = { ok: true; data: T } | { ok: false; err: string };
 
 export async function getWatchlistFromJSON(): Promise<Watchlists> {
   const watchlistJSON = fs.readFileSync(WATCHLIST_PATH, 'utf8');
-  const watchlists: Watchlists = JSON.parse(watchlistJSON);
+  const watchlists: Watchlists = JSON.parse(watchlistJSON) as Watchlists;
   return watchlists;
 }
 
@@ -55,6 +58,11 @@ export async function addToWatchlist(
   watchlistId: string,
 ) {
   const watchlists: Watchlists = await getWatchlistFromJSON();
+  if (!(watchlistId in watchlists)) {
+    return;
+  }
+  const entries = watchlists[watchlistId].entries;
+  if (entries.find((e) => e.id === entry.id)) return;
   const newEntries: WatchlistEntry[] = Array.from(
     new Set(watchlists[watchlistId].entries).add(entry),
   );

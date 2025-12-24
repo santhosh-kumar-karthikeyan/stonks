@@ -34,7 +34,7 @@ const items = [
   },
   {
     title: 'Watchlist',
-    url: '#',
+    url: '/watchlist',
     icon: ScanEye,
   },
   {

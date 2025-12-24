@@ -1,10 +1,11 @@
 import { PositionsStore } from '../store/positions.store';
 import { InstrumentsStore } from '../store/instruments.store';
+import { InstrumentType } from '../contracts/securities.contract';
 
 export interface PortfolioTableRow {
   id: string;
   symbol: string;
-  instrumentType: string;
+  instrumentType: InstrumentType;
   quantity: number;
   avgPrice: number;
   ltp: number;

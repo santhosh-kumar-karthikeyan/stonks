@@ -4,10 +4,40 @@
     "name": "General",
     "entries": [
       {
-        "id": 87491,
+        "id": "87491-1-10-KOTAK-60",
+        "avgPrice": 871.575,
+        "dayPnl": -102.99999999999955,
+        "instrumentType": "EQ",
+        "ltp": 984,
+        "pnlPercent": 12.899062042853455,
+        "marketValue": 9840,
+        "quantity": 10,
         "symbol": "HDFCBANK",
-        "type": "EQ",
-        "name": "HDFC Bank Limited"
+        "totalPnl": 1124.25
+      },
+      {
+        "id": "89871-1-10-KOTAK-1",
+        "avgPrice": 1454.575,
+        "dayPnl": 136.50000000000887,
+        "instrumentType": "EQ",
+        "ltp": 1544.4,
+        "pnlPercent": 6.175369755109542,
+        "marketValue": 100386,
+        "quantity": 65,
+        "symbol": "RELIANCE",
+        "totalPnl": 5838.65
+      },
+      {
+        "id": "86686-1-7-ZERODHA-1",
+        "avgPrice": 8029.5,
+        "dayPnl": -390,
+        "instrumentType": "EQ",
+        "ltp": 6921.5,
+        "pnlPercent": -13.799115760632667,
+        "marketValue": 20764.5,
+        "quantity": 3,
+        "symbol": "APOLLOHOSP",
+        "totalPnl": -3324
       }
     ],
     "lastAccessedAt": 0

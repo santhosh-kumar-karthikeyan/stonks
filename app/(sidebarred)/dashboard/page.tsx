@@ -33,14 +33,11 @@ export default function DashboardPage() {
       'utf-8',
     ),
   ) as Watchlists;
-  console.table(rawWatchlists);
   const instruments: Instrument[] = transformSecuritiesResponse(rawSecurities);
   const positions: Position[] = transformPortfolioResponse(rawPortfolios);
   const iStore = createInstrumentStore(instruments);
   const pStore = createPositionsStore(positions);
   const wStore = createWatchlistStore(rawWatchlists);
-  console.table(wStore);
-  console.table(wStore.getAll());
   const portfolioTableRows = selectPortfolioTableRows(pStore, iStore, wStore);
   // const portfolioSummary = selectPortfolioSummary(pStore);
 

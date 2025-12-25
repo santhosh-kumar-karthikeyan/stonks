@@ -41,7 +41,7 @@ export function selectPortfolioTableRows(
     const pnlPercent =
       investedAmount === 0 ? 0 : (totalPnl / investedAmount) * 100;
     const isSaved: boolean = watchlists.some((w) =>
-      w.entries.some((e) => e.id === instrument.id),
+      w.entries.some((e) => e.id === position.id),
     );
     rows.push({
       id: position.id,

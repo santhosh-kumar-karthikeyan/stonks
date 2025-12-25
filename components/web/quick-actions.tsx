@@ -17,6 +17,10 @@ import {
 import { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import { ButtonGroup } from '../ui/button-group';
+import { WatchlistEntry } from '@/data/models/watchlist.model';
+import { toggleToWatchlist } from '@/app/actions/watchlist';
+import { DEFAULT_WATCHLIST_NAME } from '@/lib/constants';
+import { slug } from 'slug-gen';
 
 // type Result<T> = { ok: true; data: T } | { ok: false; err: string };
 
@@ -31,14 +35,28 @@ import { ButtonGroup } from '../ui/button-group';
 //   return { ok: false, err: 'Cannot find the entry' };
 // }
 
-export default function QuickActions({ entry }: { entry: PortfolioTableRow }) {
-  const [bookmarked, setBookmarked] = useState(entry.isSaved);
+export default function QuickActions({ row }: { row: PortfolioTableRow }) {
+  const [bookmarked, setBookmarked] = useState(row.isSaved);
   return (
     <ButtonGroup>
       <Button
         variant="outline"
         onClick={() => {
           setBookmarked((marked) => !marked);
+          const newEntry: WatchlistEntry = {
+            id: row.id,
+            avgPrice: row.avgPrice,
+            dayPnl: row.dayPnl,
+            instrumentType: row.instrumentType,
+            ltp: row.ltp,
+            pnlPercent: row.pnlPercent,
+            marketValue: row.marketValue,
+            quantity: row.quantity,
+            symbol: row.symbol,
+            totalPnl: row.totalPnl,
+          };
+          console.table(newEntry);
+          toggleToWatchlist(newEntry, slug(DEFAULT_WATCHLIST_NAME));
         }}
       >
         {bookmarked ? <BookmarkCheck /> : <Bookmark />}

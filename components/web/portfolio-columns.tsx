@@ -152,7 +152,7 @@ export const portfolioColumns: ColumnDef<PortfolioTableRow>[] = [
     id: 'actions',
     cell: ({ row }) => {
       const entry = row.original;
-      return <QuickActions entry={entry} />;
+      return <QuickActions row={entry} />;
     },
   },
 ];

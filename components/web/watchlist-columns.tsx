@@ -1,14 +1,13 @@
 'use client';
 
-import { PortfolioTableRow } from '@/data/selectors/portfolio.selectors';
 import { Column, ColumnDef } from '@tanstack/react-table';
 import {
   ArrowDownNarrowWide,
   ArrowUpDown,
-  ArrowUpWideNarrow
+  ArrowUpWideNarrow,
 } from 'lucide-react';
 import { Button } from '../ui/button';
-import QuickActions from './quick-actions';
+import { WatchlistRow } from '@/data/selectors/watchlist.selector';
 
 type NumericCellProps = {
   value: number;
@@ -36,10 +35,7 @@ function NumericCell({
   );
 }
 
-function colToCell(
-  column: Column<PortfolioTableRow, unknown>,
-  colName: string,
-) {
+function colToCell(column: Column<WatchlistRow, unknown>, colName: string) {
   return (
     <Button
       className="w-full"
@@ -58,7 +54,7 @@ function colToCell(
   );
 }
 
-export const portfolioColumns: ColumnDef<PortfolioTableRow>[] = [
+export const watchlistColumns: ColumnDef<WatchlistRow>[] = [
   {
     accessorKey: 'symbol',
     header: 'Symbol',
@@ -134,13 +130,6 @@ export const portfolioColumns: ColumnDef<PortfolioTableRow>[] = [
       return (
         <NumericCell value={Number(row.getValue('marketValue'))} colorBySign />
       );
-    },
-  },
-  {
-    id: 'actions',
-    cell: ({ row }) => {
-      const entry = row.original;
-      return <QuickActions row={entry} />;
     },
   },
 ];

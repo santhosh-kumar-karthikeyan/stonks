@@ -1,16 +1,7 @@
-import {
-  Calendar,
-  Home,
-  Inbox,
-  Search,
-  Settings,
-  LayoutDashboard,
-  ScanEye,
-} from 'lucide-react';
+import { Home, LayoutDashboard, ScanEye, Settings } from 'lucide-react';
 
 import {
   Sidebar,
-  SidebarHeader,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
@@ -34,7 +25,7 @@ const items = [
   },
   {
     title: 'Watchlist',
-    url: '/watchlist',
+    url: '/watchlists',
     icon: ScanEye,
   },
   {

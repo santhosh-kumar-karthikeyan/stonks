@@ -8,31 +8,22 @@ import { createPositionsStore } from '@/data/store/positions.store';
 import { createWatchlistStore } from '@/data/store/watchlist.store';
 import { transformPortfolioResponse } from '@/data/transformers/portfolio.transformer';
 import { transformSecuritiesResponse } from '@/data/transformers/securities.transformer';
-import fs from 'fs';
-import path from 'path';
 import { Watchlists } from '../../../data/models/watchlist.model';
 import { DataTable } from '@/components/web/data-table';
 import { portfolioColumns } from '@/components/web/portfolio-columns';
 
-export default function DashboardPage() {
-  const rawSecurities = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data/raw/securities.json'),
-      'utf-8',
-    ),
-  ) as SecuritiesResponse;
-  const rawPortfolios = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data/raw/portfolio.json'),
-      'utf-8',
-    ),
-  ) as PortfolioResponse;
-  const rawWatchlists = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data/raw/watchlist.json'),
-      'utf-8',
-    ),
-  ) as Watchlists;
+const API_URL = 'http://localhost:3000';
+
+export default async function DashboardPage() {
+  const rawSecurities = (await fetch(`${API_URL}/api/securities`, {
+    next: { tags: ['securities'] },
+  }).then((res) => res.json())) as SecuritiesResponse;
+  const rawPortfolios = (await fetch(`${API_URL}/api/portfolio`, {
+    next: { tags: ['portfolio'] },
+  }).then((res) => res.json())) as PortfolioResponse;
+  const rawWatchlists = (await fetch(`${API_URL}/api/watchlists`, {
+    next: { tags: ['watchlists'] },
+  }).then((res) => res.json())) as Watchlists;
   const instruments: Instrument[] = transformSecuritiesResponse(rawSecurities);
   const positions: Position[] = transformPortfolioResponse(rawPortfolios);
   const iStore = createInstrumentStore(instruments);

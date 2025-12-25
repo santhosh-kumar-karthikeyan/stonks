@@ -4,16 +4,52 @@
     "name": "General",
     "entries": [
       {
-        "id": "87491-1-10-KOTAK-60",
-        "avgPrice": 871.575,
-        "dayPnl": -102.99999999999955,
+        "id": "182828-1-10-KOTAK-1",
+        "avgPrice": 537.381,
+        "dayPnl": 1611.600000000007,
         "instrumentType": "EQ",
-        "ltp": 984,
-        "pnlPercent": 12.899062042853455,
-        "marketValue": 9840,
-        "quantity": 10,
-        "symbol": "HDFCBANK",
-        "totalPnl": 1124.25
+        "ltp": 864.2,
+        "pnlPercent": 86.02552079838489,
+        "marketValue": 88148.40000000001,
+        "quantity": 102,
+        "symbol": "SHRIRAMFIN",
+        "totalPnl": 47153.05
+      },
+      {
+        "id": "86576-1-10-KOTAK-1",
+        "avgPrice": 7064.006,
+        "dayPnl": -1207,
+        "instrumentType": "EQ",
+        "ltp": 5171,
+        "pnlPercent": -26.797908755356964,
+        "marketValue": 87907,
+        "quantity": 17,
+        "symbol": "ABB",
+        "totalPnl": -32181.1
+      },
+      {
+        "id": "89596-1-10-KOTAK-1",
+        "avgPrice": 77.842,
+        "dayPnl": 68.24999999999761,
+        "instrumentType": "EQ",
+        "ltp": 77.28,
+        "pnlPercent": -0.7218529353109656,
+        "marketValue": 40572,
+        "quantity": 525,
+        "symbol": "NMDC",
+        "totalPnl": -295
+      },
+      {
+        "id": "86721-1-10-KOTAK-1",
+        "avgPrice": 2895.552,
+        "dayPnl": -130.00000000000682,
+        "instrumentType": "EQ",
+        "ltp": 2785.7,
+        "pnlPercent": -3.7938189333156513,
+        "marketValue": 69642.5,
+        "quantity": 25,
+        "symbol": "ASIANPAINT",
+        "totalPnl": -2746.3
       },
       {
         "id": "89871-1-10-KOTAK-1",
@@ -28,16 +64,52 @@
         "totalPnl": 5838.65
       },
       {
-        "id": "86686-1-7-ZERODHA-1",
-        "avgPrice": 8029.5,
-        "dayPnl": -390,
+        "id": "87491-1-10-KOTAK-60",
+        "avgPrice": 871.575,
+        "dayPnl": -102.99999999999955,
         "instrumentType": "EQ",
-        "ltp": 6921.5,
-        "pnlPercent": -13.799115760632667,
-        "marketValue": 20764.5,
-        "quantity": 3,
-        "symbol": "APOLLOHOSP",
-        "totalPnl": -3324
+        "ltp": 984,
+        "pnlPercent": 12.899062042853455,
+        "marketValue": 9840,
+        "quantity": 10,
+        "symbol": "HDFCBANK",
+        "totalPnl": 1124.25
+      },
+      {
+        "id": "86925-1-10-KOTAK-1",
+        "avgPrice": 39.095,
+        "dayPnl": -37.999999999999545,
+        "instrumentType": "EQ",
+        "ltp": 35.95,
+        "pnlPercent": -8.044506970200793,
+        "marketValue": 7190.000000000001,
+        "quantity": 200,
+        "symbol": "CENTRALBK",
+        "totalPnl": -629
+      },
+      {
+        "id": "88462-1-10-KOTAK-1",
+        "avgPrice": 424.331,
+        "dayPnl": -227.99999999999727,
+        "instrumentType": "EQ",
+        "ltp": 399.8,
+        "pnlPercent": -5.781060854223079,
+        "marketValue": 47976,
+        "quantity": 120,
+        "symbol": "ITC",
+        "totalPnl": -2943.7
+      },
+      {
+        "id": "87331-1-10-KOTAK-1",
+        "avgPrice": 2686.8,
+        "dayPnl": -1377.4999999999977,
+        "instrumentType": "EQ",
+        "ltp": 2235,
+        "pnlPercent": 22.44930772666369,
+        "marketValue": 55875,
+        "quantity": 25,
+        "symbol": "GRSE",
+        "totalPnl": 15079.2
       }
     ],
     "lastAccessedAt": 0

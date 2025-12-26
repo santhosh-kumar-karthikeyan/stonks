@@ -49,7 +49,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
           if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
             throw new Error(
-              errorData.details || `Server responded with ${response.status}`
+              errorData.details || `Server responded with ${response.status}`,
             );
           }
         } catch (error) {
@@ -61,7 +61,9 @@ export const useWatchlistStore = create<WatchlistStore>()(
 
       deleteWatchlist: async (watchlistId) => {
         const previousWatchlists = get().watchlists;
-        const watchlists = previousWatchlists.filter((w) => w.id !== watchlistId);
+        const watchlists = previousWatchlists.filter(
+          (w) => w.id !== watchlistId,
+        );
         set({ watchlists });
 
         try {
@@ -74,7 +76,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
           if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
             throw new Error(
-              errorData.details || `Server responded with ${response.status}`
+              errorData.details || `Server responded with ${response.status}`,
             );
           }
         } catch (error) {
@@ -110,7 +112,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
           if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
             throw new Error(
-              errorData.details || `Server responded with ${response.status}`
+              errorData.details || `Server responded with ${response.status}`,
             );
           }
         } catch (error) {
@@ -140,7 +142,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
           if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
             throw new Error(
-              errorData.details || `Server responded with ${response.status}`
+              errorData.details || `Server responded with ${response.status}`,
             );
           }
         } catch (error) {

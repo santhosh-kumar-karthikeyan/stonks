@@ -1,16 +1,33 @@
-import { kv } from '@vercel/kv';
+import { createClient } from 'redis';
 import { Watchlists } from '@/data/models/watchlist.model';
 import fs from 'fs';
 import path from 'path';
 
 const WATCHLIST_PATH = path.join(process.cwd(), 'data/raw/watchlist.json');
-const KV_KEY = 'watchlists';
+const REDIS_KEY = 'watchlists';
 
-function shouldUseKV(): boolean {
-  return !!(
-    process.env.KV_REST_API_URL && 
-    process.env.KV_REST_API_TOKEN
-  );
+let redisClient: ReturnType<typeof createClient> | null = null;
+
+async function getRedisClient() {
+  if (redisClient) {
+    return redisClient;
+  }
+
+  if (!process.env.REDIS_URL) {
+    return null;
+  }
+
+  try {
+    redisClient = createClient({
+      url: process.env.REDIS_URL,
+    });
+
+    await redisClient.connect();
+    return redisClient;
+  } catch (error) {
+    console.error('Redis connection failed:', error);
+    return null;
+  }
 }
 
 function canUseFileSystem(): boolean {
@@ -23,12 +40,17 @@ function canUseFileSystem(): boolean {
 }
 
 export async function getWatchlists(): Promise<Watchlists> {
-  if (shouldUseKV()) {
+  const redis = await getRedisClient();
+
+  if (redis) {
     try {
-      const watchlists = await kv.get<Watchlists>(KV_KEY);
-      return watchlists || [];
+      const data = await redis.get(REDIS_KEY);
+      if (data) {
+        return JSON.parse(data) as Watchlists;
+      }
+      return [];
     } catch (error) {
-      console.error('KV read failed:', error);
+      console.error('Redis read failed:', error);
       if (canUseFileSystem()) {
         const data = fs.readFileSync(WATCHLIST_PATH, 'utf-8');
         return JSON.parse(data) as Watchlists;
@@ -45,22 +67,28 @@ export async function getWatchlists(): Promise<Watchlists> {
 }
 
 export async function saveWatchlists(watchlists: Watchlists): Promise<void> {
-  if (shouldUseKV()) {
+  const redis = await getRedisClient();
+
+  if (redis) {
     try {
-      await kv.set(KV_KEY, watchlists);
+      await redis.set(REDIS_KEY, JSON.stringify(watchlists));
     } catch (error) {
-      console.error('KV write failed:', error);
+      console.error('Redis write failed:', error);
       if (canUseFileSystem()) {
         fs.writeFileSync(WATCHLIST_PATH, JSON.stringify(watchlists, null, 2));
       } else {
-        throw new Error('Cannot save watchlists: KV failed and filesystem is read-only');
+        throw new Error(
+          'Cannot save watchlists: Redis failed and filesystem is read-only',
+        );
       }
     }
   } else {
     if (canUseFileSystem()) {
       fs.writeFileSync(WATCHLIST_PATH, JSON.stringify(watchlists, null, 2));
     } else {
-      throw new Error('Cannot save watchlists: Filesystem is read-only and KV not configured');
+      throw new Error(
+        'Cannot save watchlists: Filesystem is read-only and Redis not configured',
+      );
     }
   }
 }

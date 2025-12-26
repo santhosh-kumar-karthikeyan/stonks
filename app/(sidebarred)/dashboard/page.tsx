@@ -8,9 +8,9 @@ import { createPositionsStore } from '@/data/store/positions.store';
 import { createWatchlistStore } from '@/data/store/watchlist.store';
 import { transformPortfolioResponse } from '@/data/transformers/portfolio.transformer';
 import { transformSecuritiesResponse } from '@/data/transformers/securities.transformer';
-import { Watchlists } from '../../../data/models/watchlist.model';
 import { DataTable } from '@/components/web/data-table';
 import { portfolioColumns } from '@/components/web/portfolio-columns';
+import { getWatchlists } from '@/lib/watchlist-storage';
 import fs from 'fs';
 import path from 'path';
 
@@ -27,12 +27,7 @@ export default async function DashboardPage() {
       'utf-8',
     ),
   ) as PortfolioResponse;
-  const rawWatchlists = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data/raw/watchlist.json'),
-      'utf-8',
-    ),
-  ) as Watchlists;
+  const rawWatchlists = await getWatchlists();
   const instruments: Instrument[] = transformSecuritiesResponse(rawSecurities);
   const positions: Position[] = transformPortfolioResponse(rawPortfolios);
   const iStore = createInstrumentStore(instruments);

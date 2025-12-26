@@ -14,8 +14,6 @@ interface WatchlistStore {
   removeEntry: (entryId: string, watchlistId: string) => Promise<void>;
 }
 
-const API_URL = 'http://localhost:3000';
-
 export const useWatchlistStore = create<WatchlistStore>()(
   persist(
     (set, get) => ({
@@ -44,13 +42,26 @@ export const useWatchlistStore = create<WatchlistStore>()(
 
         // Sync to server
         try {
-          await fetch(`${API_URL}/api/watchlists`, {
+          console.log('🔄 Syncing new watchlist to server:', newWatchlist.name);
+          const response = await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlists),
           });
+
+          if (!response.ok) {
+            throw new Error(`Server responded with ${response.status}`);
+          }
+
+          const result = await response.json();
+          console.log('✅ Watchlist synced successfully:', result);
         } catch (error) {
-          console.error('Failed to sync watchlist creation to server:', error);
+          console.error(
+            '❌ Failed to sync watchlist creation to server:',
+            error,
+          );
+          // Rollback the local state
+          set({ watchlists: watchlists.filter((w) => w.id !== slugName) });
           throw error;
         }
       },
@@ -61,7 +72,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
 
         // Sync to server
         try {
-          await fetch(`${API_URL}/api/watchlists`, {
+          await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlists),
@@ -88,7 +99,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
         set({ watchlists });
 
         try {
-          await fetch(`${API_URL}/api/watchlists`, {
+          await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlists),
@@ -108,7 +119,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
         set({ watchlists });
 
         try {
-          await fetch(`${API_URL}/api/watchlists`, {
+          await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlists),

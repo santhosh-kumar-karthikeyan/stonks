@@ -10,7 +10,21 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
-  const watchlists = await request.json();
-  await fs.writeFile(WATCHLIST_PATH, JSON.stringify(watchlists, null, 2));
-  return Response.json({ success: true });
+  try {
+    const watchlists = await request.json();
+    console.log(
+      '📝 Writing watchlists to file:',
+      watchlists.length,
+      'watchlists',
+    );
+    await fs.writeFile(WATCHLIST_PATH, JSON.stringify(watchlists, null, 2));
+    console.log('✅ Successfully wrote watchlists to file');
+    return Response.json({ success: true });
+  } catch (error) {
+    console.error('❌ Failed to write watchlists:', error);
+    return Response.json(
+      { success: false, error: String(error) },
+      { status: 500 },
+    );
+  }
 }

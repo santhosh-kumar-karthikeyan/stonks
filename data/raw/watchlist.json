@@ -4,18 +4,6 @@
     "name": "General",
     "entries": [
       {
-        "id": "182828-1-10-KOTAK-1",
-        "avgPrice": 537.381,
-        "dayPnl": 1611.600000000007,
-        "instrumentType": "EQ",
-        "ltp": 864.2,
-        "pnlPercent": 86.02552079838489,
-        "marketValue": 88148.40000000001,
-        "quantity": 102,
-        "symbol": "SHRIRAMFIN",
-        "totalPnl": 47153.05
-      },
-      {
         "id": "86576-1-10-KOTAK-1",
         "avgPrice": 7064.006,
         "dayPnl": -1207,
@@ -110,8 +98,50 @@
         "quantity": 25,
         "symbol": "GRSE",
         "totalPnl": 15079.2
+      },
+      {
+        "id": "86686-1-7-ZERODHA-1",
+        "avgPrice": 8029.5,
+        "dayPnl": -390,
+        "instrumentType": "EQ",
+        "ltp": 6921.5,
+        "pnlPercent": -13.799115760632667,
+        "marketValue": 20764.5,
+        "quantity": 3,
+        "symbol": "APOLLOHOSP",
+        "totalPnl": -3324
+      },
+      {
+        "id": "15974-1-10-KOTAK-1",
+        "avgPrice": 78.895,
+        "dayPnl": -26754.7,
+        "instrumentType": "EQ",
+        "ltp": 0,
+        "pnlPercent": -100.00051385437025,
+        "marketValue": 0,
+        "quantity": 370,
+        "symbol": "BLIL",
+        "totalPnl": -29191.3
+      },
+      {
+        "id": "182828-1-10-KOTAK-1",
+        "avgPrice": 537.381,
+        "dayPnl": 1611.600000000007,
+        "instrumentType": "EQ",
+        "ltp": 864.2,
+        "pnlPercent": 86.02552079838489,
+        "marketValue": 88148.40000000001,
+        "quantity": 102,
+        "symbol": "SHRIRAMFIN",
+        "totalPnl": 47153.05
       }
     ],
+    "lastAccessedAt": 0
+  },
+  {
+    "id": "mine",
+    "name": "Mine",
+    "entries": [],
     "lastAccessedAt": 0
   }
 ]

@@ -1,4 +1,12 @@
-import { Home, LayoutDashboard, ScanEye, Settings } from 'lucide-react';
+'use client';
+
+import { ChevronRight, Home, LayoutDashboard, ListTodo } from 'lucide-react';
+import {
+  SidebarMenuSub,
+  SidebarMenuSubItem,
+  SidebarMenuSubButton,
+  SidebarTrigger,
+} from '@/components/ui/sidebar';
 
 import {
   Sidebar,
@@ -6,10 +14,18 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
+  SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '../ui/collapsible';
+import { useWatchlistStore } from '@/store/watchlists.client.store';
+import Link from 'next/link';
 
 // Menu items.
 const items = [
@@ -23,36 +39,67 @@ const items = [
     url: '/dashboard',
     icon: LayoutDashboard,
   },
-  {
-    title: 'Watchlist',
-    url: '/watchlists',
-    icon: ScanEye,
-  },
-  {
-    title: 'Settings',
-    url: '#',
-    icon: Settings,
-  },
 ];
 
 export function AppSidebar() {
+  const watchlists = useWatchlistStore((s) => s.watchlists);
+
   return (
-    <Sidebar>
+    <Sidebar variant="floating">
+      <SidebarHeader>
+        <h1 className="pl-3 pt-3 text-xl font-bold">STONKS</h1>
+        <SidebarTrigger />
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>STONKS Menu</SidebarGroupLabel>
+          <SidebarGroupLabel>Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel>Watchlists</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <Collapsible defaultOpen className="group/collapsible">
+                <SidebarMenuItem>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuButton>
+                      <ListTodo />
+                      <span>All Watchlists</span>
+                      <ChevronRight className="ml-auto transition-transform group-data-[state=open]/collapsible:rotate-90" />
+                    </SidebarMenuButton>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub>
+                      {watchlists.map((watchlist) => (
+                        <SidebarMenuSubItem key={watchlist.id}>
+                          <SidebarMenuSubButton asChild>
+                            <Link href={`/watchlists/${watchlist.id}`}>
+                              <span>{watchlist.name}</span>
+                              <span className="ml-auto text-xs text-muted-foreground">
+                                {watchlist.entries.length}
+                              </span>
+                            </Link>
+                          </SidebarMenuSubButton>
+                        </SidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

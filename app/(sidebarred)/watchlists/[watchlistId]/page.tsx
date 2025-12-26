@@ -24,7 +24,7 @@ export default async function WatchlistPage({
 
   return (
     <div className="container mx-auto py-10">
-      {watchlistId}
+      {watchlist.name}
       <DataTable columns={watchlistColumns} data={watchlistRows} />
     </div>
   );

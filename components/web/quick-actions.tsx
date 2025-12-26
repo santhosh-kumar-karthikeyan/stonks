@@ -26,7 +26,7 @@ import {
   TrendingUp,
   TrendingDown,
 } from 'lucide-react';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { slug } from 'slug-gen';
 import { Button } from '../ui/button';
 import { ButtonGroup } from '../ui/button-group';
@@ -37,6 +37,11 @@ export default function QuickActions({ row }: { row: PortfolioTableRow }) {
   const [isAdding, setIsAdding] = useState(false);
   const watchlists = useWatchlistStore((s) => s.watchlists);
   const toggleEntry = useWatchlistStore((s) => s.toggleEntry);
+  const ensureDefaultWatchlist = useWatchlistStore((s) => s.ensureDefaultWatchlist);
+
+  useEffect(() => {
+    ensureDefaultWatchlist();
+  }, [ensureDefaultWatchlist]);
 
   const entry: WatchlistEntry = useMemo(
     () => ({

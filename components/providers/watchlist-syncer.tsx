@@ -13,13 +13,17 @@ export function WatchlistSyncer({
 }) {
   const initialized = useRef(false);
   const setWatchlists = useWatchlistStore((s) => s.setWatchlists);
+  const ensureDefaultWatchlist = useWatchlistStore(
+    (s) => s.ensureDefaultWatchlist,
+  );
 
   useEffect(() => {
     if (!initialized.current) {
       setWatchlists(serverData);
+      ensureDefaultWatchlist();
       initialized.current = true;
     }
-  }, [serverData, setWatchlists]);
+  }, [serverData, setWatchlists, ensureDefaultWatchlist]);
 
   return <>{children}</>;
 }

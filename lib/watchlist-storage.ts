@@ -2,6 +2,8 @@ import { createClient } from 'redis';
 import { Watchlists } from '@/data/models/watchlist.model';
 import fs from 'fs';
 import path from 'path';
+import { DEFAULT_WATCHLIST_NAME } from './constants';
+import { slug } from 'slug-gen';
 
 const WATCHLIST_PATH = path.join(process.cwd(), 'data/raw/watchlist.json');
 const REDIS_KEY = 'watchlists';
@@ -39,6 +41,22 @@ function canUseFileSystem(): boolean {
   }
 }
 
+function ensureDefaultWatchlist(watchlists: Watchlists): Watchlists {
+  const defaultId = slug(DEFAULT_WATCHLIST_NAME);
+  const hasDefault = watchlists.some((w) => w.id === defaultId);
+
+  if (!hasDefault) {
+    watchlists.unshift({
+      id: defaultId,
+      name: DEFAULT_WATCHLIST_NAME,
+      entries: [],
+      lastAccessedAt: Date.now(),
+    });
+  }
+
+  return watchlists;
+}
+
 export async function getWatchlists(): Promise<Watchlists> {
   const redis = await getRedisClient();
 
@@ -46,23 +64,26 @@ export async function getWatchlists(): Promise<Watchlists> {
     try {
       const data = await redis.get(REDIS_KEY);
       if (data) {
-        return JSON.parse(data) as Watchlists;
+        const watchlists = JSON.parse(data) as Watchlists;
+        return ensureDefaultWatchlist(watchlists);
       }
-      return [];
+      return ensureDefaultWatchlist([]);
     } catch (error) {
       console.error('Redis read failed:', error);
       if (canUseFileSystem()) {
         const data = fs.readFileSync(WATCHLIST_PATH, 'utf-8');
-        return JSON.parse(data) as Watchlists;
+        const watchlists = JSON.parse(data) as Watchlists;
+        return ensureDefaultWatchlist(watchlists);
       }
-      return [];
+      return ensureDefaultWatchlist([]);
     }
   } else {
     if (canUseFileSystem()) {
       const data = fs.readFileSync(WATCHLIST_PATH, 'utf-8');
-      return JSON.parse(data) as Watchlists;
+      const watchlists = JSON.parse(data) as Watchlists;
+      return ensureDefaultWatchlist(watchlists);
     }
-    return [];
+    return ensureDefaultWatchlist([]);
   }
 }
 

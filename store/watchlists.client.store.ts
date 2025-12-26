@@ -4,10 +4,12 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { Watchlists, WatchlistEntry } from '@/data/models/watchlist.model';
 import { slug } from 'slug-gen';
+import { DEFAULT_WATCHLIST_NAME } from '@/lib/constants';
 
 interface WatchlistStore {
   watchlists: Watchlists;
   setWatchlists: (watchlists: Watchlists) => void;
+  ensureDefaultWatchlist: () => void;
   createWatchlist: (name: string) => Promise<void>;
   deleteWatchlist: (watchlistId: string) => Promise<void>;
   toggleEntry: (entry: WatchlistEntry, watchlistId: string) => Promise<void>;
@@ -19,7 +21,41 @@ export const useWatchlistStore = create<WatchlistStore>()(
     (set, get) => ({
       watchlists: [],
 
-      setWatchlists: (watchlists) => set({ watchlists }),
+      setWatchlists: (watchlists) => {
+        const defaultId = slug(DEFAULT_WATCHLIST_NAME);
+        const hasDefault = watchlists.some((w) => w.id === defaultId);
+
+        if (!hasDefault && watchlists.length > 0) {
+          watchlists.unshift({
+            id: defaultId,
+            name: DEFAULT_WATCHLIST_NAME,
+            entries: [],
+            lastAccessedAt: Date.now(),
+          });
+        }
+
+        set({ watchlists });
+      },
+
+      ensureDefaultWatchlist: () => {
+        const watchlists = get().watchlists;
+        const defaultId = slug(DEFAULT_WATCHLIST_NAME);
+        const hasDefault = watchlists.some((w) => w.id === defaultId);
+
+        if (!hasDefault) {
+          set({
+            watchlists: [
+              {
+                id: defaultId,
+                name: DEFAULT_WATCHLIST_NAME,
+                entries: [],
+                lastAccessedAt: Date.now(),
+              },
+              ...watchlists,
+            ],
+          });
+        }
+      },
 
       createWatchlist: async (name) => {
         const watchlists = [...get().watchlists];

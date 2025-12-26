@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronRight, Home, LayoutDashboard, ListTodo } from 'lucide-react';
+import { ChevronRight, LayoutDashboard, ListTodo } from 'lucide-react';
 import {
   SidebarMenuSub,
   SidebarMenuSubItem,
@@ -27,17 +27,16 @@ import {
 import { useWatchlistStore } from '@/store/watchlists.client.store';
 import Link from 'next/link';
 
-// Menu items.
 const items = [
-  {
-    title: 'Home',
-    url: '/',
-    icon: Home,
-  },
   {
     title: 'Dashboard',
     url: '/dashboard',
     icon: LayoutDashboard,
+  },
+  {
+    title: 'Watchlists',
+    url: '/watchlists',
+    icon: ListTodo,
   },
 ];
 
@@ -46,9 +45,23 @@ export function AppSidebar() {
 
   return (
     <Sidebar variant="floating">
-      <SidebarHeader>
-        <h1 className="pl-3 pt-3 text-xl font-bold">STONKS</h1>
-        <SidebarTrigger />
+      <SidebarHeader className="border-b pb-4">
+        <Link
+          href="/dashboard"
+          className="flex items-center gap-2 px-3 pt-3 group"
+        >
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/60 transition-transform group-hover:scale-105">
+            <span className="text-lg font-bold text-primary-foreground">S</span>
+          </div>
+          <div className="flex flex-col">
+            <h1 className="text-lg font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              STONKS
+            </h1>
+            <span className="text-[10px] text-muted-foreground font-medium -mt-1">
+              Portfolio Manager
+            </span>
+          </div>
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>

@@ -100,18 +100,6 @@
         "totalPnl": 15079.2
       },
       {
-        "id": "86686-1-7-ZERODHA-1",
-        "avgPrice": 8029.5,
-        "dayPnl": -390,
-        "instrumentType": "EQ",
-        "ltp": 6921.5,
-        "pnlPercent": -13.799115760632667,
-        "marketValue": 20764.5,
-        "quantity": 3,
-        "symbol": "APOLLOHOSP",
-        "totalPnl": -3324
-      },
-      {
         "id": "15974-1-10-KOTAK-1",
         "avgPrice": 78.895,
         "dayPnl": -26754.7,
@@ -134,14 +122,26 @@
         "quantity": 102,
         "symbol": "SHRIRAMFIN",
         "totalPnl": 47153.05
+      },
+      {
+        "id": "86686-1-7-ZERODHA-1",
+        "avgPrice": 8029.5,
+        "dayPnl": -390,
+        "instrumentType": "EQ",
+        "ltp": 6921.5,
+        "pnlPercent": -13.799115760632667,
+        "marketValue": 20764.5,
+        "quantity": 3,
+        "symbol": "APOLLOHOSP",
+        "totalPnl": -3324
       }
     ],
-    "lastAccessedAt": 0
+    "lastAccessedAt": 1766730668015
   },
   {
-    "id": "mine",
-    "name": "Mine",
+    "id": "santhosh",
+    "name": "Santhosh",
     "entries": [],
-    "lastAccessedAt": 0
+    "lastAccessedAt": 1766729555737
   }
 ]

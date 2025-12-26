@@ -7,17 +7,20 @@ import { Watchlists } from '@/data/models/watchlist.model';
 import { Button } from '@/components/ui/button';
 import { Github } from 'lucide-react';
 import Link from 'next/link';
-
-const API_URL = 'http://localhost:3000';
+import fs from 'fs';
+import path from 'path';
 
 export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const rawWatchlists = (await fetch(`${API_URL}/api/watchlists`, {
-    next: { tags: ['watchlists'] },
-  }).then((res) => res.json())) as Watchlists;
+  const rawWatchlists = JSON.parse(
+    fs.readFileSync(
+      path.join(process.cwd(), 'data/raw/watchlist.json'),
+      'utf-8',
+    ),
+  ) as Watchlists;
 
   return (
     <WatchlistSyncer serverData={rawWatchlists}>

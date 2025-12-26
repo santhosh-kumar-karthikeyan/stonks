@@ -15,7 +15,6 @@ export function WatchlistSyncer({
   const setWatchlists = useWatchlistStore((s) => s.setWatchlists);
 
   useEffect(() => {
-    // Server data takes precedence - sync once on mount
     if (!initialized.current) {
       setWatchlists(serverData);
       initialized.current = true;

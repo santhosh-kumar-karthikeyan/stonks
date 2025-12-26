@@ -25,7 +25,6 @@ export const useWatchlistStore = create<WatchlistStore>()(
         const watchlists = [...get().watchlists];
         const slugName = slug(name);
 
-        // Check if watchlist already exists
         if (watchlists.find((w) => w.id === slugName)) {
           throw new Error('Watchlist already exists');
         }
@@ -40,9 +39,7 @@ export const useWatchlistStore = create<WatchlistStore>()(
         watchlists.push(newWatchlist);
         set({ watchlists });
 
-        // Sync to server
         try {
-          console.log('🔄 Syncing new watchlist to server:', newWatchlist.name);
           const response = await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -50,41 +47,46 @@ export const useWatchlistStore = create<WatchlistStore>()(
           });
 
           if (!response.ok) {
-            throw new Error(`Server responded with ${response.status}`);
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(
+              errorData.details || `Server responded with ${response.status}`
+            );
           }
-
-          const result = await response.json();
-          console.log('✅ Watchlist synced successfully:', result);
         } catch (error) {
-          console.error(
-            '❌ Failed to sync watchlist creation to server:',
-            error,
-          );
-          // Rollback the local state
+          console.error('Failed to sync watchlist creation:', error);
           set({ watchlists: watchlists.filter((w) => w.id !== slugName) });
           throw error;
         }
       },
 
       deleteWatchlist: async (watchlistId) => {
-        const watchlists = get().watchlists.filter((w) => w.id !== watchlistId);
+        const previousWatchlists = get().watchlists;
+        const watchlists = previousWatchlists.filter((w) => w.id !== watchlistId);
         set({ watchlists });
 
-        // Sync to server
         try {
-          await fetch('/api/watchlists', {
+          const response = await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlists),
           });
+
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(
+              errorData.details || `Server responded with ${response.status}`
+            );
+          }
         } catch (error) {
-          console.error('Failed to sync watchlist deletion to server:', error);
+          console.error('Failed to sync watchlist deletion:', error);
+          set({ watchlists: previousWatchlists });
           throw error;
         }
       },
 
       toggleEntry: async (entry, watchlistId) => {
-        const watchlists = [...get().watchlists];
+        const previousWatchlists = [...get().watchlists];
+        const watchlists = [...previousWatchlists];
         const watchlist = watchlists.find((w) => w.id === watchlistId);
         if (!watchlist) return;
 
@@ -99,18 +101,28 @@ export const useWatchlistStore = create<WatchlistStore>()(
         set({ watchlists });
 
         try {
-          await fetch('/api/watchlists', {
+          const response = await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlists),
           });
+
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(
+              errorData.details || `Server responded with ${response.status}`
+            );
+          }
         } catch (error) {
-          console.error('Failed to sync watchlists to server:', error);
+          console.error('Failed to sync entry toggle:', error);
+          set({ watchlists: previousWatchlists });
+          throw error;
         }
       },
 
       removeEntry: async (entryId, watchlistId) => {
-        const watchlists = [...get().watchlists];
+        const previousWatchlists = [...get().watchlists];
+        const watchlists = [...previousWatchlists];
         const watchlist = watchlists.find((w) => w.id === watchlistId);
         if (!watchlist) return;
 
@@ -119,13 +131,21 @@ export const useWatchlistStore = create<WatchlistStore>()(
         set({ watchlists });
 
         try {
-          await fetch('/api/watchlists', {
+          const response = await fetch('/api/watchlists', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(watchlists),
           });
+
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(
+              errorData.details || `Server responded with ${response.status}`
+            );
+          }
         } catch (error) {
-          console.error('Failed to sync entry removal to server:', error);
+          console.error('Failed to sync entry removal:', error);
+          set({ watchlists: previousWatchlists });
           throw error;
         }
       },

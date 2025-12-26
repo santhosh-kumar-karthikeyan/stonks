@@ -38,7 +38,6 @@ export default function QuickActions({ row }: { row: PortfolioTableRow }) {
   const watchlists = useWatchlistStore((s) => s.watchlists);
   const toggleEntry = useWatchlistStore((s) => s.toggleEntry);
 
-  // Create entry object from row
   const entry: WatchlistEntry = useMemo(
     () => ({
       id: row.id,
@@ -55,15 +54,12 @@ export default function QuickActions({ row }: { row: PortfolioTableRow }) {
     [row],
   );
 
-  // Check which watchlists contain this entry
   const watchlistsContainingEntry = useMemo(() => {
     return watchlists.filter((w) => w.entries.some((e) => e.id === entry.id));
   }, [watchlists, entry.id]);
 
-  // Is in any watchlist
   const isInAnyWatchlist = watchlistsContainingEntry.length > 0;
 
-  // Is in default watchlist
   const defaultWatchlistId = slug(DEFAULT_WATCHLIST_NAME);
   const isInDefaultWatchlist = watchlistsContainingEntry.some(
     (w) => w.id === defaultWatchlistId,

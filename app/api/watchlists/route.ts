@@ -1,30 +1,37 @@
-import fs from 'fs/promises';
-import { NextRequest } from 'next/server';
-import path from 'path';
-
-const WATCHLIST_PATH = path.join(process.cwd(), 'data/raw/watchlist.json');
+import { NextResponse } from 'next/server';
+import { getWatchlists, saveWatchlists } from '@/lib/watchlist-storage';
 
 export async function GET() {
-  const data = await fs.readFile(WATCHLIST_PATH, 'utf-8');
-  return Response.json(JSON.parse(data));
+  try {
+    const watchlists = await getWatchlists();
+    return NextResponse.json(watchlists);
+  } catch (error) {
+    console.error('GET /api/watchlists failed:', error);
+    return NextResponse.json(
+      { error: 'Failed to retrieve watchlists', details: String(error) },
+      { status: 500 }
+    );
+  }
 }
 
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   try {
-    const watchlists = await request.json();
-    console.log(
-      '📝 Writing watchlists to file:',
-      watchlists.length,
-      'watchlists',
-    );
-    await fs.writeFile(WATCHLIST_PATH, JSON.stringify(watchlists, null, 2));
-    console.log('✅ Successfully wrote watchlists to file');
-    return Response.json({ success: true });
+    const body = await request.json();
+    
+    if (!Array.isArray(body)) {
+      return NextResponse.json(
+        { error: 'Invalid request body: expected array of watchlists' },
+        { status: 400 }
+      );
+    }
+
+    await saveWatchlists(body);
+    return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('❌ Failed to write watchlists:', error);
-    return Response.json(
-      { success: false, error: String(error) },
-      { status: 500 },
+    console.error('POST /api/watchlists failed:', error);
+    return NextResponse.json(
+      { error: 'Failed to save watchlists', details: String(error) },
+      { status: 500 }
     );
   }
 }

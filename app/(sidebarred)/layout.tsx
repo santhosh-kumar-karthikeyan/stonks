@@ -3,24 +3,17 @@ import { AppSidebar } from '@/components/web/app-sidebar';
 import { ModeToggle } from '../../components/web/mode-toggle';
 import { WatchlistSyncer } from '@/components/providers/watchlist-syncer';
 import { DynamicBreadcrumb } from '@/components/web/dynamic-breadcrumb';
-import { Watchlists } from '@/data/models/watchlist.model';
 import { Button } from '@/components/ui/button';
 import { Github } from 'lucide-react';
 import Link from 'next/link';
-import fs from 'fs';
-import path from 'path';
+import { getWatchlists } from '@/lib/watchlist-storage';
 
 export default async function Layout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const rawWatchlists = JSON.parse(
-    fs.readFileSync(
-      path.join(process.cwd(), 'data/raw/watchlist.json'),
-      'utf-8',
-    ),
-  ) as Watchlists;
+  const rawWatchlists = await getWatchlists();
 
   return (
     <WatchlistSyncer serverData={rawWatchlists}>

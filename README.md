@@ -33,4 +33,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+### Production Setup
+
+1. Deploy to Vercel
+2. Go to your project → Storage → Create Database → KV
+3. Connect the KV database to your project
+4. Redeploy to apply environment variables
+
+The app will automatically use Vercel KV in production and local files in development.
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
